@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -9,7 +10,7 @@ import com.example.demo.data.Page;
 
 public interface PageRepository extends JpaRepository<Page, Integer> {
 	
-	Page findBySlug(String slug);
+	Optional<Page> findBySlug(String slug);
 	
 	/*
 	 * Two methods to implement findBySlug
